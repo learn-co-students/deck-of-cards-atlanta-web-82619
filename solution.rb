@@ -10,9 +10,11 @@ class Deck
   
     def initialize
       @cards = []
+      rank = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+      suit = ["Hearts", "Clubs", "Diamonds", "Spades"]
       
-      for rank in ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"] do
-        for suit in ["Hearts", "Clubs", "Diamonds", "Spades"] do
+      rank.each  do
+        suit.each  do
           @cards << Card.new(suit, rank)
         end
       end

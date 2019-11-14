@@ -23,13 +23,16 @@ class Deck
     def choose_card
       @cards.delete_at(rand(@cards.length))
     end
+   
 end
   
 class Card
+   
     attr_reader :rank, :suit
   
     def initialize(suit, rank)
-      @rank = rank
       @suit = suit
+      @rank = rank
     end
+   
 end
